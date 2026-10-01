@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>DAYLIDO — Daily Task List & AI Bot Reminder for Freelancers</title>
+  <meta name="description" content="Aplikasi Android untuk manajemen tugas harian, AI Bot Telegram pengingat cerdas dengan persona unik, statistik produktivitas, dan habit tracker. Gratis untuk Freelancers & Digital Creators.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DAYLIDO — Daily Task List & AI Bot Reminder">
+  <meta property="og:description" content="Kelola tugas harian dengan AI Bot Telegram yang punya persona unik: Toxic Roasting atau Suka Marah-marah. Gratis selamanya!">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📋</text></svg>">
+
+  <!-- Google Fonts: Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="gimi-body">
+
+  <!-- Main Fullscreen Showcase Container -->
+  <main class="gimi-main-wrapper">
+    <div class="gimi-container">
+
+      <!-- LEFT SIDE: Showcase Card with Phone Mockup & Floating Badges -->
+      <div class="gimi-mockup-card">
+        
+        <!-- Contextual Floating Badges -->
+        <div class="gimi-float-badge top-badge" id="float-badge-top">
+          <span class="badge-icon" id="float-badge-top-icon">📋</span>
+          <span class="badge-text" id="float-badge-top-text">Task Management Pro</span>
+        </div>
+
+        <div class="gimi-float-badge bottom-badge" id="float-badge-bottom">
+          <span class="badge-icon" id="float-badge-bottom-icon">✓</span>
+          <span class="badge-text" id="float-badge-bottom-text">AI Bot Pengingat Cerdas</span>
+        </div>
+
+        <!-- Phone Frame Mockup -->
+        <div class="gimi-phone-frame">
+          <div class="gimi-phone-speaker"></div>
+          
+          <!-- Inner Screen -->
+          <div class="gimi-screen-content" id="screen-container">
+
+            <!-- SLIDE 1: Task Management -->
+            <div class="gimi-slide-screen active" data-slide="0">
+              <div class="app-mock-topbar">
+                <div class="mock-brand">
+                  <span class="mock-sparkle">📋</span>
+                  <span>DAYLIDO</span>
+                </div>
+                <span class="mock-pill-pro">v1.0.0</span>
+              </div>
+              <div class="app-mock-body">
+                <div class="mock-video-box">
+                  <div class="mock-video-preview video-bg-task">
+                    <span class="mock-tag">Tugas Hari Ini</span>
+                    <div class="mock-task-list">
+                      <div class="mock-task-item done">
+                        <span class="task-check">✓</span>
+                        <span>Edit video untuk TikTok</span>
+                      </div>
+                      <div class="mock-task-item done">
+                        <span class="task-check">✓</span>
+                        <span>Upload konten ke Shopee</span>
+                      </div>
+                      <div class="mock-task-item">
+                        <span class="task-check empty"></span>
+                        <span>Buat thumbnail YouTube</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mock-card active-emerald">
+                  <div class="mock-card-row">
+                    <div class="mock-icon-box bg-emerald">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    </div>
+                    <div class="mock-card-text">
+                      <div class="mock-card-title">Task Harian Terorganisir</div>
+                      <div class="mock-badge-pill green">3/5 Tugas Selesai ✓</div>
+                    </div>
+                  </div>
+                  <div class="mock-chips-row">
+                    <span class="mock-chip green">✓ Prioritas Tinggi</span>
+                    <span class="mock-chip green">✓ Deadline Hari Ini</span>
+                  </div>
+                </div>
+
+                <div class="mock-cta-button">
+                  <span>📋 Tambah Tugas Baru</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 2: AI Bot Reminder -->
+            <div class="gimi-slide-screen" data-slide="1">
+              <div class="app-mock-topbar">
+                <div class="mock-brand">
+                  <span class="mock-sparkle">🤖</span>
+                  <span>Bot AI Pengingat</span>
+                </div>
+                <span class="mock-pill-pro">Telegram</span>
+              </div>
+              <div class="app-mock-body">
+                <div class="mock-video-box">
+                  <div class="mock-video-preview video-bg-bot">
+                    <span class="mock-tag">Bot Telegram AI</span>
+                    <div class="mock-chat-preview">
+                      <div class="chat-bubble bot">
+                        <span>🔥 Woy! Tugas "Edit Video" belom kelar tuh! Mau sampe kapan nunda?!</span>
+                      </div>
+                      <div class="chat-bubble user">
+                        <span>Iya iya bentar...</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mock-card active-cyan">
+                  <div class="mock-card-row">
+                    <div class="mock-icon-box bg-cyan">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <div class="mock-card-text">
+                      <div class="mock-card-title">AI Persona: Toxic Roasting</div>
+                      <div class="mock-badge-pill cyan">Powered by Gemini AI ✓</div>
+                    </div>
+                  </div>
+                  <div class="mock-chips-row">
+                    <span class="mock-chip cyan">✓ Nyindir Tanpa Ampun</span>
+                    <span class="mock-chip cyan">✓ Auto Reminder</span>
+                  </div>
+                </div>
+
+                <div class="mock-cta-button">
+                  <span>🤖 Aktifkan Bot Pengingat</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 3: Statistik & Dashboard -->
+            <div class="gimi-slide-screen" data-slide="2">
+              <div class="app-mock-topbar">
+                <div class="mock-brand">
+                  <span class="mock-sparkle">📊</span>
+                  <span>Statistik Produktivitas</span>
+                </div>
+                <span class="mock-pill-pro">Insight</span>
+              </div>
+              <div class="app-mock-body">
+                <div class="mock-video-box">
+                  <div class="mock-video-preview video-bg-stats">
+                    <span class="mock-tag">Minggu Ini</span>
+                    <div class="mock-chart-preview">
+                      <div class="chart-bar" style="height: 30%"></div>
+                      <div class="chart-bar" style="height: 55%"></div>
+                      <div class="chart-bar" style="height: 80%"></div>
+                      <div class="chart-bar active" style="height: 95%"></div>
+                      <div class="chart-bar" style="height: 60%"></div>
+                      <div class="chart-bar" style="height: 45%"></div>
+                      <div class="chart-bar" style="height: 70%"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mock-card active-emerald">
+                  <div class="mock-card-row">
+                    <div class="mock-icon-box bg-emerald">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+                    </div>
+                    <div class="mock-card-text">
+                      <div class="mock-card-title">Produktivitas Naik 85%</div>
+                      <div class="mock-badge-pill green">Streak 7 Hari Berturut ✓</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mock-cta-button">
+                  <span>📊 Lihat Dashboard Lengkap</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 4: Habit Tracker -->
+            <div class="gimi-slide-screen" data-slide="3">
+              <div class="app-mock-topbar">
+                <div class="mock-brand">
+                  <span class="mock-sparkle">🔄</span>
+                  <span>Habit Tracker</span>
+                </div>
+                <span class="mock-pill-pro">Rutin</span>
+              </div>
+              <div class="app-mock-body">
+                <div class="mock-video-box">
+                  <div class="mock-video-preview video-bg-habit">
+                    <span class="mock-tag">Kebiasaan Harian</span>
+                    <div class="mock-habit-grid">
+                      <div class="habit-day done"></div>
+                      <div class="habit-day done"></div>
+                      <div class="habit-day done"></div>
+                      <div class="habit-day done"></div>
+                      <div class="habit-day done"></div>
+                      <div class="habit-day missed"></div>
+                      <div class="habit-day done"></div>
+                      <div class="habit-day done"></div>
+                      <div class="habit-day done"></div>
+                      <div class="habit-day today"></div>
+                      <div class="habit-day empty"></div>
+                      <div class="habit-day empty"></div>
+                      <div class="habit-day empty"></div>
+                      <div class="habit-day empty"></div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mock-card active-cyan">
+                  <div class="mock-card-row">
+                    <div class="mock-icon-box bg-cyan">
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                    </div>
+                    <div class="mock-card-text">
+                      <div class="mock-card-title">9/14 Hari Konsisten</div>
+                      <div class="mock-badge-pill cyan">Habit Score: 85% ✓</div>
+                    </div>
+                    <div class="mock-switch on"></div>
+                  </div>
+                  <div class="mock-chips-row">
+                    <span class="mock-chip cyan">✓ Olahraga</span>
+                    <span class="mock-chip cyan">✓ Baca Buku</span>
+                    <span class="mock-chip cyan">✓ Ngoding</span>
+                  </div>
+                </div>
+
+                <div class="mock-cta-button">
+                  <span>🔄 Lacak Kebiasaan Baru</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- SLIDE 5: Gratis Selamanya -->
+            <div class="gimi-slide-screen" data-slide="4">
+              <div class="app-mock-topbar">
+                <div class="mock-brand">
+                  <span class="mock-sparkle">🎁</span>
+                  <span>100% Gratis</span>
+                </div>
+                <span class="mock-pill-pro">Free Forever</span>
+              </div>
+              <div class="app-mock-body">
+                <div class="mock-vip-box">
+                  <div class="mock-vip-title">Semua Fitur Gratis Selamanya!</div>
+                  <div class="mock-vip-price">
+                    <span class="curr">Rp</span>
+                    <span class="val">0</span>
+                    <span class="unit">/ selamanya</span>
+                  </div>
+                  <div class="mock-vip-perks">
+                    <div>✓ Unlimited Task & Sub-Task</div>
+                    <div>✓ AI Bot Telegram Pengingat</div>
+                    <div>✓ Statistik & Dashboard Lengkap</div>
+                    <div>✓ Habit Tracker & Kalender</div>
+                    <div>✓ Notifikasi HP & Dark Mode</div>
+                  </div>
+                </div>
+
+                <div class="mock-cta-button gold">
+                  <span>🎁 Download Gratis Sekarang</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Carousel Pagination Dots -->
+        <div class="gimi-dots-container" id="dots-container">
+          <button class="gimi-dot active" data-index="0" aria-label="Slide 1"></button>
+          <button class="gimi-dot" data-index="1" aria-label="Slide 2"></button>
+          <button class="gimi-dot" data-index="2" aria-label="Slide 3"></button>
+          <button class="gimi-dot" data-index="3" aria-label="Slide 4"></button>
+          <button class="gimi-dot" data-index="4" aria-label="Slide 5"></button>
+        </div>
+
+      </div>
+
+      <!-- RIGHT SIDE: Headline, Description, Main CTA -->
+      <div class="gimi-content-side">
+        
+        <!-- Brand Logo Header -->
+        <div class="gimi-brand-header">
+          <img src="daylido_logo.png" alt="DAYLIDO Logo" class="gimi-brand-logo">
+          <div class="gimi-brand-text">DAYLIDO.</div>
+        </div>
+
+        <!-- Dynamic Title & Description -->
+        <div class="gimi-text-block">
+          <h1 class="gimi-headline" id="gimi-headline">
+            Kelola Tugas Harian &<br>Tingkatkan Produktivitas
+          </h1>
+          <p class="gimi-description" id="gimi-description">
+            Atur semua tugas harianmu dengan mudah. Dilengkapi AI Bot Telegram yang mengingatkanmu dengan gaya nyindir atau marah-marah agar tugas cepat selesai!
+          </p>
+        </div>
+
+        <!-- Main Actions Container -->
+        <div class="gimi-actions-wrap">
+          
+          <!-- PRIMARY CTA BUTTON (Download APK) -->
+          <a href="DAYLIDO-v1.0.0.apk" download="DAYLIDO-v1.0.0.apk" class="gimi-btn-primary" id="btn-download-main">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 15V3"></path>
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+              <polyline points="7 10 12 15 17 10"></polyline>
+            </svg>
+            <span>UNDUH DAYLIDO APP</span>
+          </a>
+
+          <!-- Smartphone Compatibility Note -->
+          <div class="gimi-device-note">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect width="14" height="20" x="5" y="2" rx="2" ry="2"></rect>
+              <path d="M12 18h.01"></path>
+            </svg>
+            <span>Min. Android 8.0 (Oreo) ke atas • Semua HP Android & Tablet</span>
+          </div>
+
+          <!-- Feature Tags -->
+          <div class="gimi-feature-tags">
+            <span class="feature-tag">📋 Task Manager</span>
+            <span class="feature-tag">🤖 AI Bot</span>
+            <span class="feature-tag">📊 Statistik</span>
+            <span class="feature-tag">🔄 Habit Tracker</span>
+          </div>
+
+          <!-- Support Developer Button -->
+          <button class="support-dev-btn" id="btn-support" onclick="document.getElementById('qris-modal').classList.add('active')">
+            <span class="support-icon">☕</span>
+            <div class="support-text">
+              <span class="support-title">Traktir Kopi Developer</span>
+              <span class="support-sub">Sawer se-ikhlasnya via QRIS 💛</span>
+            </div>
+            <span class="support-badge">QRIS</span>
+          </button>
+
+        </div>
+
+        <!-- Credit -->
+        <div class="gimi-credit">
+          <span>BY AHD MEDIA</span>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <!-- QRIS Modal Overlay -->
+  <div class="qris-modal-overlay" id="qris-modal" onclick="if(event.target===this)this.classList.remove('active')">
+    <div class="qris-modal-content">
+      <!-- Close button -->
+      <button class="qris-close-btn" onclick="document.getElementById('qris-modal').classList.remove('active')">✕</button>
+      
+      <!-- Header -->
+      <div class="qris-modal-header">
+        <span class="qris-header-icon">☕</span>
+        <div class="qris-header-text">
+          <div class="qris-header-title">Traktir Kopi Developer</div>
+          <div class="qris-header-sub">Sawer se-ikhlasnya, berapapun kami hargai! 💛</div>
+        </div>
+      </div>
+
+      <!-- QRIS Card -->
+      <div class="qris-card">
+        <div class="qris-card-header">
+          <div class="qris-scan-label">SCAN QRIS</div>
+          <div class="qris-merchant">AHD MEDIA SOSIAL</div>
+        </div>
+        <div class="qris-image-wrap">
+          <img src="qris_ahd_media.jpg" alt="QRIS AHD Media" class="qris-image">
+        </div>
+      </div>
+
+      <!-- Payment methods -->
+      <div class="qris-methods">
+        <div class="qris-methods-title">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+          <span>Bisa scan dari semua e-wallet & m-banking</span>
+        </div>
+        <div class="qris-badges">
+          <span class="qris-pay-badge">GoPay</span>
+          <span class="qris-pay-badge">OVO</span>
+          <span class="qris-pay-badge">DANA</span>
+          <span class="qris-pay-badge">ShopeePay</span>
+          <span class="qris-pay-badge">BCA</span>
+          <span class="qris-pay-badge">BRI</span>
+          <span class="qris-pay-badge">Mandiri</span>
+          <span class="qris-pay-badge">BNI</span>
+        </div>
+      </div>
+
+      <!-- Thank you -->
+      <div class="qris-thanks">
+        <span class="qris-thanks-icon">🙏</span>
+        <div class="qris-thanks-text">
+          <strong>Terima kasih banyak!</strong>
+          <p>Dukunganmu membantu kami terus mengembangkan DAYLIDO menjadi lebih baik.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Toast -->
+  <div class="gimi-toast" id="notification-toast"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
+
